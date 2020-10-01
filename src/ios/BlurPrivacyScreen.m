@@ -15,12 +15,12 @@
     blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
     blurEffectView.tag = 1234;
-    blurEffectView.alpha = 0;
+    blurEffectView.alpha = 1;
     [self.window addSubview:blurEffectView];
     [self.window bringSubviewToFront:blurEffectView];
 
     // fade in the view
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:1.5 animations:^{
         blurEffectView.alpha = 1;
     }];
 }
@@ -31,7 +31,7 @@
     UIView *blurEffectView = [self.window viewWithTag:1234];
 
     // fade away colour view from main view
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:1.5 animations:^{
         blurEffectView.alpha = 0;
     } completion:^(BOOL finished) {
         // remove when finished fading
